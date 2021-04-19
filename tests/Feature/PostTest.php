@@ -21,7 +21,7 @@ class PostTest extends TestCase
     }
 
      public function test_post_get_id(){
-            $response = $this->get('/post/101');
+            $response = $this->get('/post/111');
             $response->assertStatus(200);
         }
             public function test_for_exist(){
@@ -30,7 +30,7 @@ class PostTest extends TestCase
             }
 
                 public function test_post_response(){
-                    $response = $this->get('/post/101');
+                    $response = $this->get('/post/111');
                     $response->AssertViewHas('post');
                 }
 }

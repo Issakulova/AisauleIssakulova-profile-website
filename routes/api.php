@@ -22,4 +22,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/post',[ApiController::class, 'index']);
 
-Route::post('/post/details',[ApiController::class, 'get_post']);  //post id
+Route::get('/post/details',[ApiController::class, 'get_post']);  //post id

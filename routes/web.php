@@ -19,6 +19,7 @@ use App\Http\Controllers\EmailController;
 |
 */
 
+
 Route::get('/', function () {
     return view('index');
 });
@@ -35,14 +36,11 @@ Route::get('/hobby', function () {
     return view('hobby');
 })->name('hobby');
 
-Route::get('/logo', function () {
-    return view('logo');
-})->name('logo');
 
 Route::get('post/add', function () {
     DB::table('post')->insert([
     'id'=>105,
-    'title'=>'Abdipaiyz',
+    'title'=>'Issakulova',
     'body'=>'boy'
     ]);
 });
@@ -70,5 +68,11 @@ Route::get('/email', [EmailController::class,'create']);
 Route::post('/email', [EmailController::class,'sendEmail'])->name('send.email');
 
 Route::get('/mkm',function(){
-return view('welcome');
+dd(App::getLocale());
+});
+
+
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('index');
 });

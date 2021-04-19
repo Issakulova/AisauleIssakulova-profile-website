@@ -6,10 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@500;700&family=Karla:wght@700&family=Lexend+Peta&family=Lobster&family=Mukta:wght@600&family=Tajawal&display=swap" rel="stylesheet">
 </head>
 <style>
-body{
-background:pink;
-font-family: 'Dancing Script', cursive;
-}
+
 div{
 text-align:center;
 font-size:40px;
@@ -18,12 +15,10 @@ font-size:40px;
 text-align:center;
 }
 input{
-font-family: 'Dancing Script', cursive;
-border-radius:20px;
 width:50%;
 padding:8px;
 margin:5px;
-font-size:25px;
+font-size:15px;
 }
 ul{
 text-align:center;
@@ -33,7 +28,6 @@ font-size:18px;
 text-align:center;
 }
 button{
-font-family: 'Dancing Script', cursive;
 border-radius:20px;
 width:15%;
 padding:8px;
@@ -45,7 +39,7 @@ text-align:center;
 }
 </style>
 <body>
-<div class="header"><h1>Welcome to our page!</h1></div>
+
 <form method="POST" action="{{route('add-post')}}">
 @csrf
 <div class="f">
